@@ -69,6 +69,13 @@ We believe our instantiation of Visual Dialog hits a sweet spot on this spectrum
 3개의 새로운 인코더가 있는 Visual Dialog용 신경 인코더-디코더 모델 제품군을 소개합니다. 후기 융합: 이미지, 기록 및 질문을 벡터 공간에 별도로 포함하고 이들의 '후기 융합'을 공동 포함으로 수행합니다. – 계층적 반복 인코더: 질문-답변(QA) 수준의 순환 블록 위에 있는 대화 수준의 순환 신경망(RNN)을 포함합니다. 각 QA 수준 반복 블록에는 현재 질문과 관련된 히스토리 라운드를 선택하고 관심을 기울이기 위한 어텐션 오버 히스토리 메커니즘도 포함됩니다. – MemoryNetwork: 메모리 뱅크에서 각 이전 QA 쌍을 '팩트'로 취급합니다. 저장된 사실과 이미지를 '폴링'하여 컨텍스트 벡터를 개발하는 방법을 배웁니다. 우리는 2개의 디코더(생성 및 판별)를 사용하여 이러한 모든 인코더를 훈련합니다. 모든 설정은 VisDial에 대한 최첨단 VQA 모델의 적응을 포함하여 여러 정교한 기준선을 능가합니다.
 
 • We propose a retrieval-based evaluation protocol for Visual Dialog where the AI agent is asked to sort a list of candidate answers and evaluated on metrics such as meanreciprocal-rank of the human response.
+
+우리는 AI 에이전트가 후보 답변 목록을 정렬하도록 요청하고 인간 응답의 meanreciprocal-rank와 같은 메트릭에 대해 평가하는 Visual Dialog에 대한 검색 기반 평가 프로토콜을 제안합니다.
+
 • Weconduct studies to quantify human performance.
+
+우리는 인간의 성과를 정량화하기 위해 연구를 수행합니다.
+
 • Putting it all together, on the project page we demonstrate the first visual chatbot!
 
+이 모든 것을 종합하면 프로젝트 페이지에서 첫 번째 시각적 챗봇을 시연합니다!
