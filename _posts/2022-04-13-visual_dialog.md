@@ -14,7 +14,7 @@ We introduce a family of neural encoder-decoder models for Visual Dialog with 3 
 3개의 인코더가 있는 Visual Dialog용 신경 인코더-디코더 모델 제품군을 소개합니다. Late Fusion, 계층적 순환 인코더 및 메모리 네트워크, 그리고 2개의 디코더(생성 및 판별)는 정교한 기준선을 능가합니다.우리는 검색을 제안합니다. 우리는 AI 에이전트가 일련의 후보 답변을 정렬하고 인간 응답의 평균 역수와 같은 메트릭에 대해 평가하는 프로토콜을 제안합니다. 
 우리는 인간 연구를 통해 Visual Dialog 작업에서 기계와 인간의 성능 사이의 격차를 정량화합니다. 이를 종합하여 최초의 '비주얼 챗봇'을 시연합니다! 데이터세트, 코드, 훈련된 모델 및 시각적 챗봇은 https://visualdialog.org에서 사용할 수 있습니다.
 
-# Introduction
+# 1. Introduction
 Weare witnessing unprecedented advances in computer vision (CV) and artificial intelligence (AI)– from ‘low-level’ AI tasks such as image classification [20], scene recognition [63], object detection [34]– to ‘high-level’ AI tasks such as learning to play Atari video games [42] and Go [55], answering reading comprehension questions by understanding short stories [21, 65], and even answering questions about images [6,39,49,71] and videos [57,58]!
 
 What lies next for AI? We believe that the next generation of visual intelligence systems will need to posses the ability to hold a meaningful dialog with humans in natural language about visual content. 
@@ -79,3 +79,26 @@ We believe our instantiation of Visual Dialog hits a sweet spot on this spectrum
 • Putting it all together, on the project page we demonstrate the first visual chatbot!
 
 이 모든 것을 종합하면 프로젝트 페이지에서 첫 번째 시각적 챗봇을 시연합니다!
+
+#2. Related Work
+
+**Vision and Language.** A number of problems at the intersection of vision and language have recently gained prominence – image captioning [15, 16, 27, 62], video/movie
+description [51, 59, 60], text-to-image coreference/grounding [10, 22, 29, 45, 47, 50], visual storytelling [4, 23], and
+of course, visual question answering (VQA) [3, 6, 12, 17,
+19, 37–39, 49, 69]. However, all of these involve (at most) a
+single-shot natural language interaction – there is no dialog.
+Concurrent with our work, two recent works [13, 43] have
+also begun studying visually-grounded dialog.
+
+비전과 언어. 시각과 언어의 교차점에서 이미지 캡션[15, 16, 27, 62], 비디오/영화와 같은 여러 문제가 최근에 두드러졌습니다.
+설명 [51, 59, 60], 텍스트-이미지 상호 참조/접지 [10, 22, 29, 45, 47, 50], 시각적 스토리텔링 [4, 23] 물론, 시각적 질문 답변(VQA) [3, 6, 12, 17, 19, 37–39, 49, 69]. 그러나 이들 모두는 (최대) 단일 샷 자연어 상호 작용 – 대화가 없습니다. 우리의 작업과 동시에 두 개의 최근 작업 [13, 43]이 시각적 기반 대화를 연구하기 시작했습니다.
+
+**Visual Turing Test.** Closely related to our work is that of
+Geman et al. [18], who proposed a fairly restrictive ‘Visual
+Turing Test’ – a system that asks templated, binary questions. In comparison, 1) our dataset has free-form, openended natural language questions collected via two subjects
+chatting on Amazon Mechanical Turk (AMT), resulting in
+a more realistic and diverse dataset (see Fig. 5). 2) The
+dataset in [18] only contains street scenes, while our dataset
+has considerably more variety since it uses images from
+COCO [32]. Moreover, our dataset is two orders of magnitude larger – 2,591 images in [18] vs ∼140k images, 10
+question-answer pairs per image, total of ∼1.4M QA pairs
