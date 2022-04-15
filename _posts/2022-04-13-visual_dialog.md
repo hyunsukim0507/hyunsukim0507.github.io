@@ -102,3 +102,42 @@ dataset in [18] only contains street scenes, while our dataset
 has considerably more variety since it uses images from
 COCO [32]. Moreover, our dataset is two orders of magnitude larger – 2,591 images in [18] vs ∼140k images, 10
 question-answer pairs per image, total of ∼1.4M QA pairs
+
+Gemanet al. 상당히 제한적인 '시각적
+Turing Test' – 템플릿화된 이진 질문을 하는 시스템입니다. 이에 비해 1) 데이터 세트에는 두 가지 주제를 통해 수집된 자유 형식의 개방형 자연어 질문이 있습니다.
+Amazon Mechanical Turk(AMT)에서 채팅하여
+보다 현실적이고 다양한 데이터 세트(그림 5 참조). 2)
+[18]의 데이터 세트에는 거리 장면만 포함되지만 데이터 세트는
+의 이미지를 사용하기 때문에 훨씬 더 다양합니다.
+코코 [32]. 또한, 우리의 데이터 세트는 [18]의 2,591개 이미지와 ~140k개의 이미지, 10개의 크기로 2배 더 큽니다.
+이미지당 질문-답변 쌍, 총 ~140만 QA 쌍
+
+**Text-based Question Answering.** Our work is related
+to text-based question answering or ‘reading comprehension’ tasks studied in the NLP community. Some recent
+large-scale datasets in this domain include the 30M Factoid Question-Answer corpus [52], 100K SimpleQuestions
+dataset [8], DeepMind Q&A dataset [21], the 20 artificial
+tasks in the bAbI dataset [65], and the SQuAD dataset for
+reading comprehension [46]. VisDial can be viewed as a
+fusion of reading comprehension and VQA. In VisDial, the
+machine must comprehend the history of the past dialog and
+then understand the image to answer the question. By design, the answer to any question in VisDial is not present in
+the past dialog – if it were, the question would not be asked.
+The history of the dialog contextualizes the question – the
+question ‘what else is she holding?’ requires a machine to
+comprehend the history to realize who the question is talking about and what has been excluded, and then understand
+the image to answer the question.
+
+우리의 작업은 관련이 있습니다
+NLP 커뮤니티에서 공부하는 텍스트 기반 질문 답변 또는 '독해' 작업까지. 최근 일부
+이 도메인의 대규모 데이터 세트에는 30M Factoid Question-Answer corpus[52], 100K SimpleQuestions가 포함됩니다.
+데이터 세트[8], DeepMind Q&A 데이터 세트[21], 20개의 인공
+bAbI 데이터 세트 [65]의 작업 및 SQuAD 데이터 세트
+독해력 [46]. VisDial은 다음과 같이 볼 수 있습니다.
+독해력과 VQA의 융합. VisDial에서는
+기계는 과거 대화의 역사를 이해해야 하고
+그런 다음 이미지를 이해하여 질문에 답하세요. 설계상 VisDial의 모든 질문에 대한 답변은
+과거 대화 – 그렇다면 질문이 묻지 않습니다.
+대화의 역사는 질문을 맥락화합니다.
+'그녀는 또 무엇을 들고 있습니까?'라는 질문에 기계가 필요합니다.
+역사를 이해하여 질문이 말하는 대상과 제외된 대상을 파악한 다음 이해
+질문에 답하는 이미지입니다.
